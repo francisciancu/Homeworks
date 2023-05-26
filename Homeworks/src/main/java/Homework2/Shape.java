@@ -1,4 +1,4 @@
-package org.example;
+package Homework2;
 
 public class Shape {
 
