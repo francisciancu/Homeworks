@@ -1,4 +1,4 @@
-package Homework10;
+package Homework10.Ex1;
 
 public class Ex1Elev {
     private String nume;
