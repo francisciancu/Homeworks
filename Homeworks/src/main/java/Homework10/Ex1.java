@@ -9,7 +9,7 @@ public class Ex1 {
         Scanner scanner = new Scanner(System.in);
         List<Ex1Elev> catalog = new ArrayList<>();
         boolean condition = true;
-        while (condition){
+        while (condition) {
             System.out.println("Ce doresti sa faci?");
             System.out.println("1. Verifica elev");
             System.out.println("2. Nu mai verifica elevi");
@@ -43,9 +43,9 @@ public class Ex1 {
                 }
             }
         }
-        if (catalog.size()==0){
+        if (catalog.size() == 0) {
             System.out.println("Nu sunt elevi in catalog");
-        }else {
+        } else {
             System.out.println("Catalog:");
             for (Ex1Elev elev : catalog) {
                 System.out.println("Nume: " + elev.getNume() + "   Nota: " + elev.getNota());

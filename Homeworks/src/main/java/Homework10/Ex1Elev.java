@@ -13,10 +13,6 @@ public class Ex1Elev {
         return nume;
     }
 
-    public void setNume(String nume) {
-        this.nume = nume;
-    }
-
     public double getNota() {
         return nota;
     }

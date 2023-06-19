@@ -1,6 +1,6 @@
 package Homework9;
 
-public class Monkey extends Primate implements BasicNeeds{
+public class Monkey extends Primate implements BasicNeeds {
     public Monkey() {
         System.out.println("Primate dataType instance of Monkey:");
         System.out.println("----------------------------------------------------------------------");

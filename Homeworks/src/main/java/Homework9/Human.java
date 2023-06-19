@@ -1,6 +1,6 @@
 package Homework9;
 
-public class Human extends Primate implements BasicNeeds{
+public class Human extends Primate implements BasicNeeds {
     public Human() {
         System.out.println("Primate dataType instance of Human:");
         System.out.println("----------------------------------------------------------------------");
@@ -10,6 +10,7 @@ public class Human extends Primate implements BasicNeeds{
         sleep();
         speak("human");
     }
+
     @Override
     public String eat() {
         return "Omnivore";
