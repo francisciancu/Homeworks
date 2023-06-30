@@ -2,7 +2,7 @@ package Homework14;
 
 public class Ex2 {
 
-    private static int biggersValue(int[][] matrix) {
+    private static int biggestValue(int[][] matrix) {
         int biggestValue = matrix[0][0];
         for (int[] rows : matrix) {
             for (int column : rows) {
@@ -16,6 +16,6 @@ public class Ex2 {
 
     public static void main(String[] args) {
         int[][] matrix = {{1, 2, 3}, {4, 9, 6}, {7, 8, 5}};
-        System.out.println(biggersValue(matrix));
+        System.out.println(biggestValue(matrix));
     }
 }
