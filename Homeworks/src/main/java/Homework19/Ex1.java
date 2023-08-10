@@ -29,6 +29,7 @@ public class Ex1 {
                 Thread.sleep(2000);
                 assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shop/the-forest/",
                         "Nu am ajuns pe https://keybooks.ro/shop/the-forest/");
+
             }
         }
 
