@@ -23,13 +23,18 @@ public class Ex1 {
         var usernameList = driver.findElements(usernameField);
         var passwordList = driver.findElements(passwordField);
 
-        assertFalse(usernameList.get(0).isDisplayed(), "Campul username este vizibil pana sa dam click pe butonul de login");
-        assertFalse(passwordList.get(0).isDisplayed(), "Campul password este vizibil pana sa dam click pe butonul de login");
-        assertTrue(loginButtonsList.get(0).isDisplayed(), "Login Button not found");
+        assertFalse(usernameList.get(0).isDisplayed(),
+                "Campul username este vizibil pana sa dam click pe butonul de login");
+        assertFalse(passwordList.get(0).isDisplayed(),
+                "Campul password este vizibil pana sa dam click pe butonul de login");
+        assertTrue(loginButtonsList.get(0).isDisplayed(),
+                "Login Button not found");
         loginButtonsList.get(0).click();
         Thread.sleep(1000);
-        assertTrue(usernameList.get(0).isDisplayed(), "Campul username nu este vizibil dupa ce dam click pe butonul de login");
-        assertTrue(passwordList.get(0).isDisplayed(), "Campul nu password este vizibil dupa ce dam click pe butonul de login");
+        assertTrue(usernameList.get(0).isDisplayed(),
+                "Campul username nu este vizibil dupa ce dam click pe butonul de login");
+        assertTrue(passwordList.get(0).isDisplayed(),
+                "Campul nu password este vizibil dupa ce dam click pe butonul de login");
         System.out.println("Everything works as expected");
         driver.close();
     }
