@@ -2,8 +2,6 @@ package Homework18;
 
 import KeyBooksDriver.BaseTestKeybooks;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertFalse;
@@ -41,6 +39,6 @@ public class Ex1 extends BaseTestKeybooks {
                 "Campul nu password este vizibil dupa ce dam click pe butonul de login");
 
         System.out.println("Everything works as expected");
-        driver.close();
+
     }
 }

@@ -10,12 +10,12 @@ public class BaseTestKeybooks {
     @BeforeClass
     public void setupDriver(){
         driver = new ChromeDriver();
-        driver.manage().window().maximize();//face maximize la browser
+        driver.manage().window().maximize();
         driver.get("https://keybooks.ro/");
 
     }
     @AfterClass
-    public void tearDownDriver() throws InterruptedException {
+    public void tearDownDriver(){
         driver.close();
     }
 
