@@ -1,5 +1,7 @@
 package Homework19;
 
+
+import KeyBooksDriver.BaseTestKeybooks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,14 +10,13 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class Ex1 {
+public class Ex1 extends BaseTestKeybooks {
     public static final By THE_FOREST_BOOK = By.cssSelector("a[href='the-forest']");
     public static final By TITLES = By.cssSelector("li.sc_tabs_title");
-    static WebDriver driver = new ChromeDriver();
 
-    @Test
+    @Test(description = "Check if book appears in all categories and the redirect link works")
     public static void secondTest() throws InterruptedException {
-        driver.get("https://keybooks.ro/");
+
         var titlesList = driver.findElements(TITLES);
         var forestBook = driver.findElements(THE_FOREST_BOOK);
 

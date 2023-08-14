@@ -1,5 +1,6 @@
 package Homework18;
 
+import KeyBooksDriver.BaseTestKeybooks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,16 +9,14 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-public class Ex1 {
-    static WebDriver driver = new ChromeDriver();
+public class Ex1 extends BaseTestKeybooks {
 
     public static final By loginButton = By.cssSelector("a[href='#popup_login']");
     public static final By usernameField = By.cssSelector("input[placeholder='Login or Email']");
     public static final By passwordField = By.cssSelector("input[placeholder='Password']");
 
-    @Test(description = "Check if fields appear when clicking the login button")
+    @Test(description = "Check if fields appears when clicking the login button")
     public static void loginButton() throws InterruptedException {
-        driver.get("https://keybooks.ro/");
 
         var loginButtonsList = driver.findElements(loginButton);
         var usernameList = driver.findElements(usernameField);
