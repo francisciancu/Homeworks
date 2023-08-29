@@ -14,10 +14,12 @@ import java.time.Duration;
 public class BaseTestKeybooks {
     public static WebDriver driver;
 
+
     @BeforeClass
     public void setupDriver(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://keybooks.ro/");
 
     }
