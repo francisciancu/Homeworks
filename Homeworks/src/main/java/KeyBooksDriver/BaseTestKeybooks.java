@@ -1,6 +1,5 @@
 package KeyBooksDriver;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,7 +24,7 @@ public class BaseTestKeybooks {
     }
     @AfterClass
     public void tearDownDriver(){
-        driver.close();
+        driver.quit();
     }
 
     public boolean isVisible(WebElement element){
@@ -35,6 +34,10 @@ public class BaseTestKeybooks {
     public boolean isClickable(WebElement element){
         final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         return wait.until(ExpectedConditions.elementToBeClickable(element)).isEnabled() && wait.until(ExpectedConditions.elementToBeClickable(element)).isDisplayed();
+    }
+
+    public void clickOnElement(WebElement element){
+        element.click();
     }
 
 }
