@@ -54,4 +54,10 @@ public class GalleryFormatPage {
     public boolean checkVisibilityOfAuthor() {
         return JsExecutorUtils.checkVisibilityOfElement(driver.findElement(AUTHOR_TEXT_ELEMENT));
     }
+    public String getCommentText(){
+        return JsExecutorUtils.getTextOfElement(driver.findElement(COMMENT_TEXT_ELEMENT));
+    }
+    public String getAuthorText(){
+        return JsExecutorUtils.getTextOfElement(driver.findElement(AUTHOR_TEXT_ELEMENT));
+    }
 }
