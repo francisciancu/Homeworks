@@ -26,7 +26,6 @@ public class JsExecutorTest extends BaseTestKeybooks {
         galleryFormatPage.postComment();
         Assert.assertTrue(galleryFormatPage.checkVisibilityOfComment());
         Assert.assertTrue(galleryFormatPage.checkVisibilityOfAuthor());
-        System.out.println(galleryFormatPage.getCommentText());
         Assert.assertEquals(galleryFormatPage.getCommentText(),galleryFormatPage.VALUES_MAP.get("commentText"));
         Assert.assertEquals(galleryFormatPage.getAuthorText(),galleryFormatPage.VALUES_MAP.get("author"));
         System.out.println("Everything works as expected");
