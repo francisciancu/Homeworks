@@ -19,7 +19,7 @@ public class BlogPostPage extends BaseTestKeybooks {
         this.driver = driver;
     }
 
-    private List<String> getCateoriesText(List<WebElement> listOfElements) {
+    private List<String> getCategoriesText(List<WebElement> listOfElements) {
         List<String> listOfText = new ArrayList<>();
         for (WebElement element : listOfElements) {
             listOfText.add(element.getText());
@@ -28,7 +28,7 @@ public class BlogPostPage extends BaseTestKeybooks {
     }
 
     public boolean checkCategories(List<WebElement> element, List<String> listOfExpectedElements) {
-        var listOfActualElements = getCateoriesText(element);
+        var listOfActualElements = getCategoriesText(element);
         if (listOfExpectedElements.size() != listOfActualElements.size()) {
             return false;
         }
