@@ -39,5 +39,8 @@ public class BaseTestKeybooks {
     public void clickOnElement(WebElement element){
         element.click();
     }
+    public void goBack(){
+        driver.navigate().back();
+    }
 
 }
