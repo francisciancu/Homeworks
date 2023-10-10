@@ -1,5 +1,6 @@
 package KeyBooksDriver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BaseTestKeybooks {
     public static WebDriver driver;
@@ -38,6 +40,27 @@ public class BaseTestKeybooks {
 
     public void clickOnElement(WebElement element){
         element.click();
+    }
+    public void clickOnElement(By by){
+        driver.findElement(by).click();
+    }
+    public void sendKeys(By by,String keys){
+        driver.findElement(by).sendKeys(keys);
+    }
+    public void sendKeys(WebElement element,String keys){
+        element.sendKeys(keys);
+    }
+    public String getCurrentUrl(){
+        return driver.getCurrentUrl();
+    }
+    public String getTextFromElement(By by){
+        return driver.findElement(by).getText();
+    }
+    public String getTextFromElement(WebElement element){
+        return element.getText();
+    }
+    public List<WebElement> elements (By by){
+        return driver.findElements(by);
     }
     public void goBack(){
         driver.navigate().back();
