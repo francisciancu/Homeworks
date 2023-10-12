@@ -41,7 +41,7 @@ public class BookPage extends BaseTestKeybooks {
 
     public boolean checkAllBookImg() {
         var bookImgs = getListOfImg();
-        var validationMatrix = new ArrayList<Boolean>();
+        var finalAnswer = true;
         for (WebElement bookImg : bookImgs) {
             var validation = false;
             for (String expectedBookImg : EXPECTED_BOOK_IMGS) {
@@ -50,11 +50,10 @@ public class BookPage extends BaseTestKeybooks {
                     break;
                 }
             }
-            validationMatrix.add(validation);
-        }
-        var finalAnswer = true;
-        for (boolean validation:validationMatrix) {
-            finalAnswer &= validation;
+            finalAnswer = validation;
+            if (!finalAnswer){
+                break;
+            }
         }
         return finalAnswer;
     }
