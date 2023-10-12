@@ -5,8 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class BookPage extends BaseTestKeybooks {
     public WebDriver driver;
@@ -16,7 +17,12 @@ public class BookPage extends BaseTestKeybooks {
     public final By BOOK_PHOTOS = By.cssSelector("ol.flex-control-nav>li>img");
     public final String EXPECTED_BOOK_CATEGORY = "New releases";
     public final String EXPECTED_BOOK_PRODUCT_ID = "1709";
-    private static final List<String> EXPECTED_BOOK_IMGS = Arrays.asList("TheWickedKing1", "TheWickedKing2", "TheWickedKing3", "TheWickedKing4");
+    private static final Map<String, Boolean> CHECKED_BOOKS = new HashMap<>() {{
+        put("TheWickedKing1", false);
+        put("TheWickedKing2", false);
+        put("TheWickedKing3", false);
+        put("TheWickedKing4", false);
+    }};
 
     public BookPage(WebDriver driver) {
         this.driver = driver;
@@ -41,11 +47,13 @@ public class BookPage extends BaseTestKeybooks {
     public boolean checkAllBookImg() {
         var bookImgs = getListOfImg();
         var finalAnswer = true;
-        for (WebElement bookImg : bookImgs) {
+        for (var bookImg : bookImgs) {
             var validation = false;
-            for (String expectedBookImg : EXPECTED_BOOK_IMGS) {
+            for (String expectedBookImg : CHECKED_BOOKS.keySet()) {
                 validation = checkBookImgSrc(bookImg, expectedBookImg);
+
                 if (validation) {
+                    CHECKED_BOOKS.replace(expectedBookImg, true);
                     break;
                 }
             }
@@ -54,7 +62,11 @@ public class BookPage extends BaseTestKeybooks {
                 break;
             }
         }
+        for (boolean bookWasChecked : CHECKED_BOOKS.values()) {
+            if (!bookWasChecked) {
+                return false;
+            }
+        }
         return finalAnswer;
     }
-
 }
