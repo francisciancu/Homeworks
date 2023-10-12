@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -51,7 +50,7 @@ public class BookPage extends BaseTestKeybooks {
                 }
             }
             finalAnswer = validation;
-            if (!finalAnswer){
+            if (!finalAnswer) {
                 break;
             }
         }
