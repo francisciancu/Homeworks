@@ -20,5 +20,13 @@ public class DataProviderClass {
         data[5][1] = "https://keybooks.ro/shop/storm/";
         return data;
     }
+    @DataProvider(name = "keyFoodAccount")
+    public static Object[][] keyFoodCredentials() {
+        Object[][] data = new Object[1][2];
+        data[0][0] = "customer";
+        data[0][1] = "customer@123";
+
+        return data;
+    }
 
 }
