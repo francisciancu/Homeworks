@@ -1,6 +1,6 @@
 package Homework20;
 
-import KeyBooksDriver.BaseTestKeybooks;
+import KeyDriver.BaseTestKeybooks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;

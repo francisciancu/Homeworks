@@ -3,7 +3,7 @@ package Homework31.tests;
 import Homework31.pages.GalleryFormatPage;
 import Homework31.pages.MenuPage;
 import Homework31.pages.PostFormatsPage;
-import KeyBooksDriver.BaseTestKeybooks;
+import KeyDriver.BaseTestKeybooks;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

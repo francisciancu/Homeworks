@@ -1,6 +1,6 @@
 package Homework31.pages;
 
-import KeyBooksDriver.BaseTestKeybooks;
+import KeyDriver.BaseTestKeybooks;
 import Utils.JsExecutorUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

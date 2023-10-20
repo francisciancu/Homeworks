@@ -3,7 +3,7 @@ package Homework25.tests;
 import Homework25.pages.AudioPostPage;
 import Homework25.pages.MenuPage;
 import Homework25.pages.PostFormatsPage;
-import KeyBooksDriver.BaseTestKeybooks;
+import KeyDriver.BaseTestKeybooks;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

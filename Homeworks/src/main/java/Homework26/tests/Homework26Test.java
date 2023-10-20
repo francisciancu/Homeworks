@@ -1,7 +1,7 @@
 package Homework26.tests;
 
 import Homework26.pages.*;
-import KeyBooksDriver.BaseTestKeybooks;
+import KeyDriver.BaseTestKeybooks;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

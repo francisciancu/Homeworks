@@ -2,7 +2,7 @@ package Homework22.tests;
 
 import Homework22.pages.MenuPage;
 import Homework22.pages.SingleAuthorPage;
-import KeyBooksDriver.BaseTestKeybooks;
+import KeyDriver.BaseTestKeybooks;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;

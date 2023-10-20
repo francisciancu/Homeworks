@@ -1,6 +1,6 @@
 package Homework21;
 
-import KeyBooksDriver.BaseTestKeybooks;
+import KeyDriver.BaseTestKeybooks;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import static Utils.RandomTextGenerator.generateRandomString;

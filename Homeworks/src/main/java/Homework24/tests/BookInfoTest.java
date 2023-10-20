@@ -3,7 +3,7 @@ package Homework24.tests;
 import Homework24.pages.BookPage;
 import Homework24.pages.MenuPage;
 import Homework24.pages.ShopPage;
-import KeyBooksDriver.BaseTestKeybooks;
+import KeyDriver.BaseTestKeybooks;
 
 import org.testng.annotations.Test;
 
