@@ -18,23 +18,21 @@ public class Homework35Test extends BaseTestKeyFood {
                 .clickOnLogin()
                 .checkLogin()
                 .goBackToHome()
-                .clickOnCategory(FRUITS_AND_VEGETABLES)
-                .clickOnProduct()
+                .chooseCategoryAndProduct(FRUITS_AND_VEGETABLES)
                 .addToWishlistAndGoBackToHomePage()
-                .clickOnCategory(BREAKFAST_AND_DAIRY)
-                .clickOnProduct()
+                .chooseCategoryAndProduct(BREAKFAST_AND_DAIRY)
                 .addToWishlistAndGoBackToHomePage()
-                .clickOnCategory(BEVERAGES)
-                .clickOnProduct()
+                .chooseCategoryAndProduct(BEVERAGES)
                 .addToWishlistAndGoBackToHomePage()
-                .clickOnCategory(BISCUITS_SNACKS)
-                .clickOnProduct()
+                .chooseCategoryAndProduct(BISCUITS_SNACKS)
                 .addToWishlistAndGoBackToHomePage()
                 .goToWishlist()
                 .checkProductsName()
                 .checkAddToCartButton()
                 .checkAllProducts()
-                .addAllToCart().waiHere();
+                .addAllToCart()
+                .applyAction()
+                .checkIfExpectedProductIsStillInTheList();
 
     }
 }

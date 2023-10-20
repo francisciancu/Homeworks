@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyMethods {
@@ -99,6 +100,13 @@ public class MyMethods {
 
     public static String getTextFromElement(WebElement element) {
         return element.getText();
+    }
+    public static List<String> getListOfTextFromElements(List<WebElement> elements) {
+        var textList = new ArrayList<String>();
+        for (var element: elements) {
+            textList.add(getTextFromElement(element));
+        }
+        return textList;
     }
 
     public static List<WebElement> elements(By by) {
