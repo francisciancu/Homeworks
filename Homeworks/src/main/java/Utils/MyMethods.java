@@ -128,18 +128,20 @@ public class MyMethods {
     }
 
     public static void clickOnElement(WebElement element) {
+        var elementSelector = extractElementSelector(element);
+        logger.info("Trying to click on element with selector [ " + elementSelector + " ]");
         try {
             element.click();
-            logger.info("Successfully clicked on element [ " + element + " ]");
+            logger.info("Successfully clicked on element with selector [ " + elementSelector + " ]");
         } catch (NoSuchElementException e) {
-            logger.error("Element [ " + element + " ] not found: " + e.getMessage());
+            logger.error("Element with selector [ " + elementSelector + " ] not found: " + e.getMessage());
         } catch (Exception e) {
             logger.error("An error occurred: " + e.getMessage());
         }
     }
 
     public static void clickOnElement(By by) {
-
+        logger.info("Trying to click on element with selector [ " + by + " ]");
         try {
             driver.findElement(by).click();
             logger.info("Successfully clicked on element with selector [ " + by + " ]");
@@ -169,12 +171,13 @@ public class MyMethods {
     }
 
     public static void sendKeys(WebElement element, String keys) {
-        logger.info("Trying to send keys: " + keys + " to element [ " + element + " ]");
+        var elementSelector = extractElementSelector(element);
+        logger.info("Trying to send keys: " + keys + " to element with selector [ " + elementSelector + " ]");
         try {
             element.sendKeys(keys);
-            logger.info("Successfully sent keys: " + keys + " to element [ " + element + " ]");
+            logger.info("Successfully sent keys: " + keys + " to element with selector [ " + elementSelector + " ]");
         } catch (NoSuchElementException e) {
-            logger.error("Element [ " + element + " ] not found: " + e.getMessage());
+            logger.error("Element with selector [ " + elementSelector + " ] not found: " + e.getMessage());
         } catch (Exception e) {
             logger.error("An error occurred: " + e.getMessage());
         }
